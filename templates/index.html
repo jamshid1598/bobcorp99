@@ -1,0 +1,178 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>KorXona</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
+    <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/icons.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="icon" href="{% static 'images/divan.jpg' %}">
+</head>
+
+<body>
+    
+    <div class="loader_bg">
+        <div class="loader"><img src="{% static 'images/loading.gif' %}" alt="#" /></div>
+    </div>
+
+    <form>
+        <header class="header">
+            <h1 class="header__title">Korxona</h1>
+            <p class="header__descr">KIRIM CHIQIM</p>
+            <div class="header__timer">
+                <span class="header__timer-extra">0</span> SANA
+            </div>
+
+        </header>
+
+        <main class="main">
+            <!-- asosiy oyna -->
+            <section class="main__product" id="plainBurger">
+                <div class="main__product-preview">
+                    <div class="main__product-info">
+                        <img src="{% static 'images/material.jpg' %}" alt="" class="main__product-img">
+                        <h2 class="main__product-title">MATO (m²)
+                            <span class="main__product-many">10000 sum</span>
+                        </h2>
+                        <div class="main__product-edit">
+
+                            <!-- narxni o'zgartirish knopkasi -->
+                            <a href="#"><i class="fas fa-pen-square"></i></a>
+                        </div>
+                    </div>
+                    <p class="main__product-descr">
+                        Maxsulot uchun kerak bo'lgan MATO hajmini kiriting
+                    </p>
+                </div>
+                <div class="main__product-extra">
+                    <div class="main__product-number">
+
+                        <!-- Miqdorga qo'shilish -->
+
+                        <a class="main__product-btn fa-reg minus" data-symbol="-"></a>
+                        <!-- Minus knopkasi -->
+
+                        <output class="main__product-num">0</output>
+                        <!-- Miqdor -->
+
+                        <a class="main__product-btn fa-reg plus" data-symbol="+"></a>
+                        <!-- Plus knopkasi -->
+
+                    </div>
+                    <div class="main__product-price"><span>0</span> sum</div> <!-- umumiy narx -->
+                </div>
+
+                <div class="main__product-kcall"><span>0</span> m²</div> <!-- Kaloriylar summasi -->
+
+            </section>
+            <section class="main__product" id="freshBurger">
+                <div class="main__product-preview">
+                    <div class="main__product-info">
+                        <img src="{% static 'images/metall.jpg' %}" alt="" class="main__product-img">
+                        <h2 class="main__product-title">TEMIR (m) <span class="main__product-many">20500
+                                so'm</span></h2>  <!-- temir profil-->
+                                
+                        <div class="main__product-edit">
+                            <a href="#"><i class="fas fa-pen-square"></i></a>
+                        </div>
+                    </div>
+                    
+                    <p class="main__product-descr">
+                        Maxsulot uchun kerak bo'lgan TEMIR PROFIL hajmini kiriting
+                    </p>
+                </div>
+                <div class="main__product-extra">
+                    <div class="main__product-number">
+
+                        <!-- Miqdorga qo'shilish -->
+
+                        <a class="main__product-btn fa-reg minus" data-symbol="-"></a>
+                        <!-- Minus knopkasi -->
+
+                        <output class="main__product-num">0</output>
+                        <!-- Miqdorga qo'shilish -->
+
+                        <a class="main__product-btn fa-reg plus" data-symbol="+"></a>
+                        <!-- Plus knopkasi -->
+
+                    </div>
+                    <div class="main__product-price"><span>0</span> sum</div> <!-- Umumiy miqdor -->
+                </div>
+
+                <div class="main__product-kcall"><span>0</span> m</div> <!-- kaloriylar summasi -->
+
+            </section>
+            <section class="main__product" id="freshCombo">
+                <div class="main__product-preview">
+                    <div class="main__product-info">
+                        <img src="{% static 'images/derevo.jpg' %}" alt="" class="main__product-img">
+                        <h2 class="main__product-title">TAXTA (m³) <span class="main__product-many">31900 sum</span>
+                        </h2>
+                        <div class="main__product-edit">
+                            <a href="#"><i class="fas fa-pen-square"></i></a>
+                        </div>
+                    </div>
+                    <p class="main__product-descr">
+                        Maxsulot uchun kerak bo'lgan YOG'OCH TAXTA hajmini kiriting
+                    </p>
+                </div>
+                <div class="main__product-extra">
+                    <div class="main__product-number">
+
+                        <!-- Miqdorga qo'shilish -->
+
+                        <a class="main__product-btn fa-reg minus" data-symbol="-"></a>
+                        <!-- Minus knopkasi -->
+
+                        <output class="main__product-num">0</output>
+                        <!-- Miqdorga qo'shilish -->
+
+                        <a class="main__product-btn fa-reg plus" data-symbol="+"></a>
+                        <!-- Plus knopkasi -->
+
+                    </div>
+                    <div class="main__product-price"><span>0</span> sum</div> <!-- Umumiy miqdor -->
+                </div>
+
+                <div class="main__product-kcall"><span>0</span> m³</div> <!-- kaloriylar summasi -->
+
+            </section>
+        </main>
+        <div class="button">
+            <!-- hisoblash knopkasi -->
+            <button class="addCart" type="reset">
+                <span class="fa-reg cart"></span> Hisoblash
+            </button>
+        </div>
+    </form>
+    <div class="receipt active">
+        <!-- chek -->
+        <div class="receipt__window">
+            <h2 class="receipt__window-title">KIRIM CHIQIM</h2>
+
+            <!-- Chekga informatsiya chiqishi  -->
+            <div class="receipt__window-out"></div>
+
+            <button class="receipt__window-btn">Ok</button> <!-- bosilganda sahifa yengilanadi -->
+        </div>
+    </div>
+
+    <div class="view">
+        <button class="view__close">
+            <span class="fa-reg close"></span>
+        </button>
+        <img src="{% static 'images/product1.jpg' %}" alt="">
+    </div>
+
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+
+</html>
